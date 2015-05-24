@@ -16,7 +16,7 @@ Petal.Width.Max = max(iris$Petal.Width)
 Petal.Width.Mean = mean(iris$Petal.Width)
 
 shinyUI(pageWithSidebar(
-  headerPanel("Developing Data Products Project"),
+  headerPanel("Flower Species Predictor"),
   sidebarPanel(
     sliderInput('Sepal.Length', 'Sepal Length', value = Sepal.Length.Mean, min = Sepal.Length.Min, max = Sepal.Length.Max, step = .5),
     sliderInput('Sepal.Width', 'Sepal Width', value = Sepal.Width.Mean, min = Sepal.Width.Min, max = Sepal.Width.Max, step = .5),

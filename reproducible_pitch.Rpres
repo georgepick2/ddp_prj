@@ -1,0 +1,45 @@
+Predict Flower Species
+========================================================
+author: George Pick
+date: 2015/5/24
+autosize: false
+width: 1400
+height: 1000
+
+Introduction
+========================================================
+
+In this presentation We introduce the Flower Species Predictor app.
+We use the *iris* dataset from R to train a *random forest* predictor.
+We use the predictor to determine the species based on the user input.
+
+Data
+========================================================
+
+The data come from the *iris* dataset. This is a summary of the data:
+
+```{r}
+data(iris)
+head(iris)
+```
+
+Algorithm
+========================================================
+
+We use a the *random forest* machine learning algorithm to make our predictions.
+The entire iris data set is used for training in the application. 
+
+```{r}
+library(randomForest)
+modFit <- randomForest(Species~., data=iris)
+modFit
+```
+
+Prediction
+========================================================
+
+A prediction is performed as follows:
+
+* The user enters the data usign four sliders. The data consist of sepal length/width and petal length/width. 
+* The application tracks the user input dynamically without making a prediction. The point corresponding to the user selection is shown in black since we don't know the species at this time. 
+* The user clicks on the *Determine Species* button below the sliders. The server runs a prediction on the give data and the point is now colored in the color corresponding to the predicted species.

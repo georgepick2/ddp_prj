@@ -1,1 +1,3 @@
-# ddp_prj
+# Developing Data Products
+
+This app is based on the R iris dataset. It implements a machine learning algorithm to predict the species of a flower based on sepal length/width and petal length/width. Set those values using the sliders on the left. The graph above will track your input. When ready to make a prediction, press the "Determine Species" button. The point on the graph corresponding to your input will change color according to the prediction made by the algorithm.
